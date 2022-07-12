@@ -1,12 +1,12 @@
 import { useDispatch } from "react-redux/es/exports";
-import { prodSlidAction } from "../../Store/Products";
+import { prodAction } from "../../Store/productsSlice";
 const CartItems = (props) => {
   const dispatchAmount = useDispatch();
   const upHandler = () => {
-    dispatchAmount(prodSlidAction.addToCart(props.item));
+    dispatchAmount(prodAction.addToCart(props.item));
   };
   const downHandler = () => {
-    dispatchAmount(prodSlidAction.removeFromCart(props.item));
+    dispatchAmount(prodAction.removeFromCart(props.item));
   };
   return (
     <li className="cart-list-item">

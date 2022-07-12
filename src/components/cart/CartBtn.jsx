@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import { showCartAction } from "../../Store/showCart";
+import { uiAction } from "../../Store/uiSlice";
 const CartBtn = () => {
   const totalAmount = useSelector((state) => state.list.totalAmount);
   const dispatchShowCart = useDispatch();
   const showCartHandler = () => {
-    dispatchShowCart(showCartAction.showTaggol());
+    dispatchShowCart(uiAction.showTaggol());
   };
   return (
     <button onClick={showCartHandler} className="header-nav-showCartBtn">

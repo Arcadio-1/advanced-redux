@@ -7,8 +7,9 @@ const prodSlice = createSlice({
     setProdList(state, action) {
       state.prodList = action.payload;
     },
-    setOrderList(state, action) {
-      state.orderList = action.payload;
+    replaceOrderListData(state, action) {
+      state.orderList = action.payload.orderList;
+      state.totalAmount = action.payload.totalAmount;
     },
     addToCart(state, action) {
       state.totalAmount++;
@@ -37,5 +38,5 @@ const prodSlice = createSlice({
     },
   },
 });
-export const prodSlidAction = prodSlice.actions;
+export const prodAction = prodSlice.actions;
 export default prodSlice.reducer;

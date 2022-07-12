@@ -1,10 +1,10 @@
 import { useDispatch } from "react-redux";
-import { showCartAction } from "../../Store/showCart";
+import { uiAction } from "../../Store/uiSlice";
 const BackDrop = () => {
   const dispatchShowCart = useDispatch();
 
   const closeCartHandler = () => {
-    dispatchShowCart(showCartAction.showTaggol());
+    dispatchShowCart(uiAction.showTaggol());
   };
   return <div onClick={closeCartHandler} className="backDrop"></div>;
 };

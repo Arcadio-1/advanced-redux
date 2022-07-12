@@ -211,3 +211,21 @@ body {
     }
   }
 }
+.notification {
+  width: 100%;
+  text-align: center;
+  &-massage {
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: snow;
+  }
+  .orange-bg {
+    background-color: orange;
+  }
+  .green-bg {
+    background-color: green;
+  }
+  .red-bg {
+    background-color: rgb(211, 38, 7);
+  }
+}
